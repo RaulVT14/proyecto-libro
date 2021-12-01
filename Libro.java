@@ -32,10 +32,18 @@ public class Libro {
     public int getNumeroPaginas() {
         return numeroPaginas;
     }
+    public String getDetalles() {
+        String detalles;
+        detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas;
+        return detalles;
+    }
     public void imprimeAutor() {
         System.out.println("El autor del libro es: " + autor);
     }
     public void imprimeTitulo() {
         System.out.println("El titulo del libro es: " + titulo);
+    }
+    public void imprimeDetalles() {
+        System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas);
     }
 }
