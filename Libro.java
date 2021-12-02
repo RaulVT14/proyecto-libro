@@ -40,7 +40,7 @@ public class Libro {
             detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + numeroReferencia;
         }
         else {
-            detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas;
+            detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + "ZZZ";
         }
         return detalles;
     }
@@ -48,7 +48,12 @@ public class Libro {
         return numeroReferencia;
     }
     public void setNumeroReferencia(String numero) {
-        numeroReferencia = numero;
+        if (numero.length() >= 3) {
+            numeroReferencia = numero;
+        }
+        else {
+            System.out.println("ERROR, introduzca más de 3 caracteres");
+        }
     }
     public void imprimeAutor() {
         System.out.println("El autor del libro es: " + autor);
@@ -61,7 +66,7 @@ public class Libro {
             System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + numeroReferencia);
         }
         else {
-            System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas);
+            System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + "ZZZ");
         }
     }
 }
