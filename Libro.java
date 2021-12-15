@@ -49,24 +49,17 @@ public class Libro {
         String infoNumeroReferencia = "";
         if (esLibroDeTexto == true) {
             infoLibro = "si";
-            if (numeroReferencia != "") {
-                infoNumeroReferencia = numeroReferencia;
-            }
-            else {
-                infoNumeroReferencia = "ZZZ";
-            }
-            detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + infoNumeroReferencia + " Prestado: " + vecesPrestado + " Libro de texto: " + infoLibro;
         }
         else {
             infoLibro = "no";
-            if (numeroReferencia != "") {
-                infoNumeroReferencia = numeroReferencia;
-            }
-            else {
-                 infoNumeroReferencia = "ZZZ";
-            }   
-            detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + infoNumeroReferencia + " Prestado: " + vecesPrestado + " Libro de texto: " + infoLibro;
         }
+        if (numeroReferencia != "") {
+            infoNumeroReferencia = numeroReferencia;
+        }
+        else {
+            infoNumeroReferencia = "ZZZ";
+        }
+        detalles = "Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + infoNumeroReferencia + " Prestado: " + vecesPrestado + " Libro de texto: " + infoLibro;
         return detalles;
     }
     public String getNumeroReferencia() {
@@ -91,24 +84,17 @@ public class Libro {
         String mostrarNumeroReferencia = "";
         if (esLibroDeTexto == true) {
             infoLibroMostrar = "si";
-            if (numeroReferencia != "") {
-                mostrarNumeroReferencia = numeroReferencia;
-            }
-            else {
-                mostrarNumeroReferencia = "ZZZ";
-            }
-            System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + mostrarNumeroReferencia + " Prestado: " + vecesPrestado + " Libro de texto: " + infoLibroMostrar);
             }
         else {
             infoLibroMostrar = "no";
-            if (numeroReferencia != "") {
-                mostrarNumeroReferencia = numeroReferencia;
-            }
-            else {
-                mostrarNumeroReferencia = "ZZZ";
-            }
-            System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + mostrarNumeroReferencia + " Prestado: " + vecesPrestado + " Libro de texto: " + infoLibroMostrar);
         }
+        if (numeroReferencia != "") {
+                mostrarNumeroReferencia = numeroReferencia;
+        }
+        else {
+                mostrarNumeroReferencia = "ZZZ";
+        }
+        System.out.println("Titulo: " + titulo + "," + " Autor: " + autor + "," + " Paginas: " + numeroPaginas + "," + " Numero de referencia: " + mostrarNumeroReferencia + " Prestado: " + vecesPrestado + " Libro de texto: " + infoLibroMostrar);
     }
     public void prestar() {
         vecesPrestado = +1;
